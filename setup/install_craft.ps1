@@ -1,7 +1,7 @@
 param(
     [alias("root")][string]$Script:installRoot=$null,
     [alias("python")][string]$Script:python=$null,
-    [alias("branch")][string]$Script:branch="master"
+    [alias("branch")][string]$Script:branch="patch-1"
     )
 
 
@@ -131,7 +131,7 @@ if (!$Script:python) {
     TestAndFetchPython
 }
 &{
-$url = "https://raw.githubusercontent.com/KDE/craft/$Script:branch/setup/CraftBootstrap.py"
+$url = "https://raw.githubusercontent.com/hipolipolopigus/craft/$Script:branch/setup/CraftBootstrap.py"
 Write-Host "Downloading:" $url
 (new-object net.webclient).DownloadFile("$url", "$Script:installRoot\download\CraftBootstrap.py")
 

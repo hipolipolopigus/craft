@@ -269,9 +269,9 @@ class InstallDB(object):
         cursor.execute('''PRAGMA table_info('packageList')''')
         info = cursor.fetchall()
         if OsUtils.isWin():
-            installCommand = "iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/KDE/craft/master/setup/install_craft.ps1'))"
+            installCommand = "iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/hipolipolopigus/craft/patch-1/setup/install_craft.ps1'))"
         else:
-            installCommand = "wget https://raw.githubusercontent.com/KDE/craft/master/setup/CraftBootstrap.py -O setup.py && python3.6 setup.py --prefix ~/kde"
+            installCommand = "wget https://raw.githubusercontent.com/hipolipolopigus/craft/patch-1/setup/CraftBootstrap.py -O setup.py && python3.6 setup.py --prefix ~/kde"
 
         if "packagePath" != info[2][1]:
             print("Craft database and folder structure changed.\n"
