@@ -290,7 +290,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog="CraftSetupHelper")
     parser.add_argument("--root", action="store", help="Deprecated: use prefix instead.")
     parser.add_argument("--prefix", action="store", default=os.getcwd(), help="The installation directory.")
-    parser.add_argument("--branch", action="store", default="patch-1", help="The branch to install")
+    parser.add_argument("--branch", action="store", default="master", help="The branch to install")
     parser.add_argument("--verbose", action="store_true", help="The verbosity.")
     parser.add_argument("--dry-run", action="store", help="Configure the passed CraftSettings.ini and exit.")
     parser.add_argument("--version", action="version", version="%(prog)s master")
